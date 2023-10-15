@@ -1,0 +1,142 @@
+/***********
+TODO:
+- Fix the bottom alignment of main nav
+- Fix the line height of project nav
+- Add more formats to @font-face to support more browsers WOFF and WOFF2, TTF, and EOT
+- Add fallback fonts
+
+************/
+
+/* =============== Fonts =============== */
+
+@font-face {
+    font-family: 'Helvetica Regular'; 
+    src: url('assets\fonts\Helvetica Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PolySans Bulky'; 
+    src: url('assets\fonts\PolySans Bulky.ttf') format('truetype');
+}
+
+/* ============ Animations ============= */
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: black;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+/* ========= Index Page Styles ========= */
+
+body{
+    background: #EFEDE9;
+    font-family: 'Helvetica Regular', sans-serif;
+    line-height: 1.4rem;
+    font-size: .95rem;
+    padding: 40px 70px;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PolySans Bulky',  sans-serif;
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75rem;
+    font-size: 1rem;
+    letter-spacing: -.025rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    padding-inline-start: 0;
+    margin:0;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation{
+    list-style-type: none;
+    font-family: 'PolySans Bulky',  sans-serif;
+}
+
+#proj-nav{
+    padding: 10dvh 0;
+}
+
+#proj-nav li{
+    margin: 15px 0px;
+}
+
+#proj-nav a{
+    display: flex;
+    align-items: flex-start;
+    line-height: .6;
+}
+
+.proj-title{
+    font-size: 4rem;
+    padding-left: 5px;
+}
+
+#number-01{
+    padding-right: .22rem;
+}
+
+.container-centered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main-nav{
+    position: absolute;
+    right: 0px;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    height: 5.6rem;
+    text-align: right;
+}
+
+#index-bottom-sec{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#index{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 80px);
+}
