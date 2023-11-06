@@ -1,85 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- compatibility -->
-        <!-- meta http-equiv="X-UA-Compatible" content="ie=edge" -->
-        <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
-        <link rel="icon" type="image/svg+xml" href="assets/images/index/Logo_white.svg">
 
-        <!-- Google Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- compatibility -->
+    <!-- meta http-equiv="X-UA-Compatible" content="ie=edge" -->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/index/Logo_white.svg">
 
-        <title>Evelyn Zhang</title>
-      </head>
-<body id="index">
-    <div id="header">
-        <div>
-            Evelyn Zhang
-            <br>
-            Multimedia Designer & Creative Developer
-        </div>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <title>Evelyn Zhang</title>
+</head>
+
+<body>
+    <div class="content">
+        <div id="header">
+            <div>
+                Evelyn Zhang
+                <br>
+                Multimedia Designer & Creative Developer
+            </div>
             <div>
                 <a href="index.html">
-                    <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
-                        <image x="0" y="0" width="60" height="60" xlink:href="assets/images/index/Logo_black.svg" />
+                    <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                        <image x="0" y="0" width="50" height="50" xlink:href="assets/images/index/Logo_black.svg" />
                     </svg>
                 </a>
             </div>
         </div>
-    </div>
-    <ul class="navigation" id="proj-nav">
-        <li>
-            <a href="Maximillien&Co.html">
-                <span id="number-01">01</span>
-                <span class="proj-title hover-underline-animation">Maximillien & Co.</span>
-            </a>
-        </li>
-        <li>
-            <a href="Maximillien&Co.html">
-                <span>02</span>
-                <span class="proj-title hover-underline-animation">Recipe Recooked</span>
-            </a>
-        </li>
-        <li>
-            <a href="Maximillien&Co.html">
-                <span>03</span>
-                <span class="proj-title hover-underline-animation">How Your Dairy is Made</span>
-            </a>
-        </li>
-    </ul>
-    <div id="index-bottom-sec">
-        <div class="container-centered">
-            <div>
-                <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
-                    <image x="0" y="0" width="30" height="30" xlink:href="assets/images/index/Star_green.svg" />
-                </svg>
+        <ul class="navigation" id="proj-nav">
+            <li class="hover_img">
+                <a href="projects/Maximillien&Co.html">
+                    <span class="proj-num" id="number-01">01</span>
+                    <span class="proj-title">Maximillien & Co.</span>
+                    <span><img src="assets/images/index/dummy_proj.jpg" alt="image" height="400" /></span>
+                </a>
+            </li>
+            <li class="hover_img">
+                <a href="projects/Maximillien&Co.html">
+                    <span class="proj-num">02</span>
+                    <span class="proj-title">Recipe Recooked</span>
+                    <span><img src="assets/images/index/dummy_proj.jpg" alt="image" height="400" /></span>
+                </a>
+            </li>
+            <li class="hover_img">
+                <a href="projects/Maximillien&Co.html">
+                    <span class="proj-num">03</span>
+                    <span class="proj-title">How Your Dairy is Made</span>
+                    <span><img src="assets/images/index/dummy_proj.jpg" alt="image" height="400" /></span>
+                </a>
+            </li>
+        </ul>
+        <div id="index-bottom-sec">
+            <div class="container-centered">
+                <div>
+                    <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+                        <image class="star" x="0" y="0" width="30" height="30"
+                            xlink:href="assets/images/index/Star_green.svg" />
+                    </svg>
+                </div>
+                <div>
+                    Open for any collaborations and offers
+                </div>
             </div>
-            <div>
-                Open for any collaborations and offers
-            </div>   
+            <nav class="main-nav">
+                <ul class="navigation">
+                    <li>
+                        <a class="hover-underline-animation" href="index.html">work</a>
+                    </li>
+                    <li>
+                        <a class="hover-underline-animation" href="about.html">about</a>
+                    </li>
+                    <li>
+                        <a class="hover-underline-animation" href="">gallary</a>
+                    </li>
+                    <li>
+                        <a class="hover-underline-animation" href="">contact</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav class="main-nav">
-            <ul class="navigation" >
-                <li>
-                    <a class="hover-underline-animation" href="index.html">work</a>
-                </li>
-                <li>
-                    <a class="hover-underline-animation" href="about.html">about</a>
-                </li>
-                <li>
-                    <a class="hover-underline-animation" href="">archive</a>
-                </li>
-                <li>
-                    <a class="hover-underline-animation" href="">contact</a>
-                </li>
-            </ul>
-        </nav>
     </div>
+
     <!-- <p>We used Google design sprint’s day 2 contents to explore solutions. We started from getting inspiration from other products and services (Lightening Demo). And we took 3 steps(Idea, Crazy8 and Solution Sketch)  and gradually narrowed down ideas to a more specific solution.</p> -->
 </body>
+
 </html>
