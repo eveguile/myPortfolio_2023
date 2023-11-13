@@ -1,8 +1,19 @@
 /***********
 TODO:
+All pages:
 - Fix responsiveness (ie. the main nav
 - Add more formats to @font-face to support more browsers WOFF and WOFF2, TTF, and EOT
 - Add fallback fonts
+- page load transition effect
+- Entrance effect
+
+Index page:
+- Mouse change when project is hovered
+- Thumbnails
+
+Project pages:
+- Main nav collapse
+
 
 ************/
 
@@ -10,12 +21,12 @@ TODO:
 
 @font-face {
     font-family: 'Helvetica Regular';
-    src: url('assets\fonts\Helvetica Regular.ttf') format('truetype');
+    src: url('../fonts/Helvetica\ Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'PolySans Bulky';
-    src: url('assets\fonts\PolySans Bulky.ttf') format('truetype');
+    src: url('../fonts/PolySans\ Bulky.ttf') format('truetype');
 }
 
 /* ============ Animations ============= */
@@ -86,6 +97,19 @@ TODO:
     }
 }
 
+/* Page transition */
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.5s ease-in-out;
+    z-index: 2;
+  }
 
 /* ========= Index Page Styles ========= */
 
@@ -204,14 +228,98 @@ ul {
 
 .hover_img a img {
     position: fixed;
-    display: none;
     z-index: 99;
     top: 50%;
     right: 70px;
     /* transform: rotate(-5deg) translate(0%, -50%); */
-    transform: translate(0%, -50%);
+    opacity: 0;
+    transform: translate(4%, -50%);
+    transition: transform .6s, opacity .6s;
 }
 
 .hover_img a:hover img {
+    opacity: 1;
+    transform: translate(0%, -50%);
+}
+
+/* ========= Project Page Style ========= */
+.project .main-nav {
+    overflow: hidden;
+    height: 9rem;
+}
+
+.project .main-nav .checkbox {
+    position: absolute;
     display: block;
+    height: 21px;
+    width: 30px;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.hamburger-lines {
+    display: block;
+    height: 21px;
+    width: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-lines .line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #0e2431;
+}
+
+/* Hamburger Animation */
+
+.hamburger-lines .line1 {
+    transform-origin: top right;
+    transition: transform 0.4s ease-in-out;
+}
+
+.hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hamburger-lines .line3 {
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-in-out;
+    width: 60%;
+    margin-left: auto;
+}
+
+.project .navigation {
+    transform: translate(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project input[type="checkbox"]:checked~.navigation {
+    transform: translateX(0);
+}
+
+.project .main-nav input[type="checkbox"]:checked~.hamburger-lines {
+    transform: translateX(-2px);
+}
+
+.project .main-nav input[type="checkbox"]:checked~.hamburger-lines .line1 {
+    transform: rotate(-40deg);
+}
+
+.project .main-nav input[type="checkbox"]:checked~.hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+.project .main-nav input[type="checkbox"]:checked~.hamburger-lines .line3 {
+    transform: rotate(40deg);
+    width: 100%;
 }
