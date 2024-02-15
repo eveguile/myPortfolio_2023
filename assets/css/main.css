@@ -111,23 +111,17 @@ Project pages:
     z-index: 2;
 }
 
-/* ========= Index Page Styles ========= */
+/* ========= Global Styles ========= */
 
 body {
     background: #EFEDE9;
     font-family: 'Helvetica Regular', sans-serif;
     line-height: 1.4rem;
     font-size: .95rem;
-    overflow: hidden;
-
-}
-
-.content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: calc(100vh - 175px);
-    padding: 40px 70px;
+
 }
 
 h1,
@@ -137,6 +131,7 @@ h4,
 h5,
 h6 {
     font-family: 'PolySans Bulky', sans-serif;
+    line-height: 2rem;
 }
 
 p {
@@ -159,7 +154,8 @@ ul {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 40px 70px 0 70px;
+    margin: 40px 70px 0 70px;
+    padding: 0 0 40px 0;
     width: calc(100% - 140px);
 }
 
@@ -168,9 +164,41 @@ ul {
     font-family: 'PolySans Bulky', sans-serif;
 }
 
-#proj-nav {
-    padding: 15vh 0 0 0;
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh -100px);
+    margin: 0 70px;
 }
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    /* border: 6px solid transparent; */
+    background-clip: content-box;
+}
+
+
+/* ========= Index Page Style ========= */
 
 #proj-nav li {
     margin: 15px 0px;
@@ -199,12 +227,14 @@ ul {
     padding-right: .6rem;
 }
 
-#index-bottom-sec {
+.bottom-sec {
+    margin: 0 70px 40px 70px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     min-height: 100%;
+    bottom: 0;
 }
 
 .container-centered {
@@ -246,6 +276,11 @@ ul {
 }
 
 /* ========= Project Page Style ========= */
+.index-page {
+    position: relative;
+    min-height: 100vh;
+}
+
 .project-page .fixed {
     position: fixed;
     z-index: 1000;
@@ -405,4 +440,34 @@ ul {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+/* ========= About Page Style ========= */
+.about-page .content {
+    margin-bottom: 40px;
+}
+
+.about-page .content>div {
+    display: flex;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.about-page .content>div>div {
+    flex: 1;
+    margin: 0 50 0 50;
+}
+
+.portrait {
+    padding-right: 50px;
+}
+
+.about-page .bottom-sec {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.contact {
+    padding: 20px 0;
 }
