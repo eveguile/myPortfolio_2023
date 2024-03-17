@@ -322,8 +322,12 @@ ul {
     max-width: 40rem;
     /* line-height: 1.5rem; */
     display: grid;
-    grid-template-columns: 1.5fr 3fr 2fr;
+    grid-template-columns: 1.5fr 3fr 2.5fr;
     padding-top: 7rem;
+}
+
+#moment-energy .info-list {
+    grid-template-columns: 1fr 3fr 1fr;
 }
 
 .info-list .columns>div {
@@ -343,7 +347,7 @@ ul {
 }
 
 .info-list .three-rows {
-    margin-bottom: 2.6rem;
+    margin-bottom: 3.45rem;
 }
 
 .info-list div:last-child {
@@ -375,6 +379,11 @@ ul {
     max-width: 950px;
     padding: 100px;
     margin: auto;
+}
+
+.dark-bg {
+    background-color: #2A2A2A;
+    color: white;
 }
 
 .feature {
@@ -428,8 +437,33 @@ ul {
     background-image: url('../images/RecipeRecooked/Feature_bg_3.png');
 }
 
-.flow-map {
-    background-color: #2A2A2A;
+#hello-plant .content img {
+    padding: 30px 0;
+}
+
+.three-directions {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.three-directions img {
+    max-width: 36.5%;
+    height: auto;
+    position: relative;
+    /* max-width: calc((100vw - 200px) / 3 + 2em); */
+}
+
+#direction_1 {
+    right: -5%;
+}
+
+#direction_2 {
+    top: 2em;
+}
+
+#direction_3 {
+    left: -5%;
 }
 
 .CTA {
@@ -525,7 +559,7 @@ footer .tag span {
     display: block;
     height: 3px;
     width: 100%;
-    background: #0e2431;
+    background: black;
 }
 
 /* Hamburger Animation */
