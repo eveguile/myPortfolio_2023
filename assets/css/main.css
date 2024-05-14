@@ -59,6 +59,7 @@ Project pages:
 /* project navigation opacity hover effect */
 #proj-nav li {
     color: black;
+    opacity: 0.2;
     transition: color 0.3s;
 }
 
@@ -68,6 +69,15 @@ Project pages:
 
 #proj-nav li:hover {
     opacity: 1;
+}
+
+#proj-nav:not(:hover) li:first-child {
+    opacity: 1;
+}
+
+#proj-nav:not(:hover) li:first-child img {
+    opacity: 1;
+    transform: translate(0%, -50%);
 }
 
 /* Star Pulsing animation */
@@ -252,6 +262,26 @@ ul {
     padding-right: .6rem;
 }
 
+.hover_img a {
+    position: relative;
+}
+
+.hover_img a img {
+    position: fixed;
+    z-index: 99;
+    top: 50%;
+    right: 70px;
+    /* transform: rotate(-5deg) translate(0%, -50%); */
+    opacity: 0;
+    transform: translate(4%, -50%);
+    transition: transform .6s, opacity .6s;
+}
+
+.hover_img a:hover img {
+    opacity: 1;
+    transform: translate(0%, -50%);
+}
+
 .bottom-sec {
     margin: 0 70px 40px 70px;
     position: relative;
@@ -290,26 +320,6 @@ ul {
     height: auto;
     text-align: right;
     padding-bottom: .2rem;
-}
-
-.hover_img a {
-    position: relative;
-}
-
-.hover_img a img {
-    position: fixed;
-    z-index: 99;
-    top: 50%;
-    right: 70px;
-    /* transform: rotate(-5deg) translate(0%, -50%); */
-    opacity: 0;
-    transform: translate(4%, -50%);
-    transition: transform .6s, opacity .6s;
-}
-
-.hover_img a:hover img {
-    opacity: 1;
-    transform: translate(0%, -50%);
 }
 
 /* ========= Project Page Style ========= */
@@ -505,7 +515,7 @@ footer a {
     color: white;
 }
 
-footer .hover-underline-animation {
+footer .underline-animation {
     color: white;
 }
 
