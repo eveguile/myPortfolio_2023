@@ -35,7 +35,6 @@ Project pages:
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: black;
 }
 
 .hover-underline-animation::after {
