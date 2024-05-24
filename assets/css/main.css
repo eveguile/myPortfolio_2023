@@ -36,13 +36,11 @@ Project pages:
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 400px;
+    width: 20rem;
+    height: 20rem;
     border-radius: 100%;
-    background-color: orange;
     background-image: linear-gradient(#ff00f2 15%, orange);
-    /* background-image: linear-gradient(#EC6CFF, blue); */
-    filter: blur(150px);
+    filter: blur(7rem);
     transition: all 300ms ease-out;
     position: fixed;
     pointer-events: none;
@@ -50,6 +48,22 @@ Project pages:
     top: 0;
     transform: translate(calc(-50% + 15px), -50%);
     z-index: -1;
+    transition: opacity 2s ease, transform 0.1s ease;
+    opacity: 1;
+}
+
+.loader {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: #000;
+    /* background: #F78EC6; */
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
 }
 
 /* main navigation underline hover effect */
@@ -127,31 +141,15 @@ Project pages:
     }
 }
 
-/* Page transition */
-.loader {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    transform: scaleX(0);
-    transform-origin: right center;
-    transition: transform 0.5s ease-in-out;
-    z-index: 2;
-}
-
 /* ========= Global Styles ========= */
 
 body {
+    width: 100%;
+    height: 100%;
     background: #EFEDE9;
     font-family: 'Helvetica Regular', sans-serif;
     line-height: 1.4rem;
-    font-size: .95rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
+    font-size: 1rem;
 }
 
 h1,
@@ -166,9 +164,9 @@ h6 {
 
 p {
     font-family: 'Inter', sans-serif;
-    line-height: 1.75rem;
+    line-height: 2rem;
     font-size: 1rem;
-    letter-spacing: -.025rem;
+    letter-spacing: -.015rem;
 }
 
 a {
@@ -245,9 +243,19 @@ ul {
 
 
 /* ========= Index Page Style ========= */
-.index-page {
-    position: relative;
+
+#index-page {
+    width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#index-page .bottom-sec,
+.header {
+    position: relative;
+    font-size: .95rem;
 }
 
 /* .content {
@@ -304,7 +312,7 @@ ul {
 
 .bottom-sec {
     margin: 0 70px 40px 70px;
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -409,6 +417,7 @@ ul {
 
 .project-page .hero-section {
     display: flex;
+    justify-content: space-between;
 }
 
 .project-page .hero-img {
@@ -497,7 +506,6 @@ ul {
     max-width: 36.5%;
     height: auto;
     position: relative;
-    /* max-width: calc((100vw - 200px) / 3 + 2em); */
 }
 
 #direction_1 {
@@ -656,7 +664,7 @@ footer .tag span {
     display: inline;
     margin-right: .8rem;
     padding: .5rem 1rem;
-    outline: auto;
+    outline: 2px solid;
     border-radius: 50rem;
 }
 
@@ -668,17 +676,19 @@ footer .tag span {
 
 
 /* ========= About Page Style ========= */
-.about-page .content {
+
+#about-page .content {
     margin-bottom: 40px;
 }
 
-.about-page .content>div {
+#about-page .content>div {
     display: flex;
+    flex-direction: row;
     margin: 0 auto;
     max-width: 80%;
 }
 
-.about-page .content>div>div {
+#about-page .content>div>div {
     flex: 1;
     margin: 0 50 0 50;
 }
@@ -687,7 +697,7 @@ footer .tag span {
     padding-right: 50px;
 }
 
-.about-page .bottom-sec {
+#about-page .bottom-sec {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -695,4 +705,9 @@ footer .tag span {
 
 .contact {
     padding: 20px 0;
+    opacity: 1;
+}
+
+.contact img:hover {
+    opacity: 0.5;
 }
