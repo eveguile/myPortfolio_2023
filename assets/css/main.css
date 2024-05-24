@@ -676,19 +676,27 @@ footer .tag span {
 
 
 /* ========= About Page Style ========= */
+#about-page .fixed {
+    position: fixed;
+    right: 70px;
+}
 
-#about-page .content {
+#about-page .bottom-sec {
     margin-bottom: 40px;
 }
 
-#about-page .content>div {
+#about-page #about-me {
+    padding: 100px 0;
+}
+
+#about-page #about-me>div {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
     max-width: 80%;
 }
 
-#about-page .content>div>div {
+#about-page #about-me>div>div {
     flex: 1;
     margin: 0 50 0 50;
 }
@@ -701,6 +709,59 @@ footer .tag span {
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+#about-page footer {
+    background: none;
+    color: black;
+}
+
+#about-page footer>div {
+    padding: 100px 70px 140px 70px;
+}
+
+#about-page footer h1 {
+    font-size: 4rem;
+    margin: 0;
+    line-height: 2rem;
+}
+
+#about-page .lets-chat {
+    display: flex;
+    height: 3rem;
+    gap: 4rem;
+}
+
+#about-page .contact-text {
+    display: flex;
+    align-self: flex-end;
+    gap: 4rem;
+}
+
+#about-page h2 {
+    font-size: 1.5rem;
+}
+
+#about-page .contact-text a {
+    color: black;
+}
+
+#about-page .contact-text a:hover {
+    opacity: 0.5;
+}
+
+#about-page .contact-text h2 {
+    margin: 0;
+}
+
+#about-page footer .github-link {
+    color: black;
+    position: relative;
+    top: 100px;
+}
+
+#about-page .github-link {
+    position: fixed;
 }
 
 .contact {
